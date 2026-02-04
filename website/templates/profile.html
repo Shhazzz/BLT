@@ -185,7 +185,7 @@
                 {% include "./includes/crypto_donation.html" %}
             </div>
             <!-- Points Section -->
-            <div class="score-container select-none flex gap-2 items-center justify-center bg-gray-100 dark:bg-gray-800 text-black/80 p-4 rounded-lg w-full cursor-pointer hover:bg-gray-200/80 transition-all duration-200">
+            <div class="score-container select-none flex gap-2 items-center justify-center bg-gray-100 dark:bg-gray-800 dark:text-gray-300 text-black/80 p-4 rounded-lg w-full cursor-pointer hover:bg-gray-200/80 transition-all duration-200">
                 <span class="text-2xl font-bold text-yellow-500">{{ my_score|default:0 }}</span>
                 <span class="text-lg font-bold">{% trans "POINTS" %}</span>
                 <i class="fa fa-chevron-down transition-transform duration-200"
@@ -371,31 +371,31 @@
             <div class="flex flex-col gap-3">
                 <h1 class="text-xl font-semibold text-black/90 dark:text-white/90">{% trans "Issue Stats" %}</h1>
                 <div class="w-full flex flex-wrap gap-3">
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=General`">
                         ⚙️ {% trans "General" %} {{ bug_type_0 | length }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=Number`">
                         ⚠️ {% trans "Number" %} {{ bug_type_1 | length }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=Functional`">
                         🏆 {% trans "Functional" %} {{ bug_type_2 | length }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=Performance`">
                         ⚡ {% trans "Performance" %} {{ bug_type_3 | length }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=Security`">
                         ⚡ {% trans "Security" %} {{ bug_type_4 | length }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=Typo`">
                         ✏️ {% trans "Typo" %} {{ bug_type_5 | length }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=Design`">
                         🧑‍💻 {% trans "Design" %} {{ bug_type_6 | length }}
                     </button>
@@ -404,15 +404,15 @@
             <div class="flex flex-col gap-3">
                 <h1 class="text-xl font-semibold text-black/90 dark:text-white/90">{% trans "User Stats" %}</h1>
                 <div class="w-full flex flex-wrap gap-3">
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}`">
                         🏆 {% trans "Bugs Reported" %} {{ total_bugs }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=open`">
                         🐞 {% trans "Open Issues" %} {{ bug_type_1 | length }}
                     </button>
-                    <button class="bg-gray-100 dark:bg-gray-800 hover:bg-red-400 hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
+                    <button class="bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition duration-200 text-black/90 font-medium py-2 px-4 rounded-lg"
                             onclick="window.location.href=`{% url 'all_activitys' %}?user={{ user.username }}&label=close`">
                         ⌨️ {% trans "Closed Issues" %} {{ bug_type_2 | length }}
                     </button>
