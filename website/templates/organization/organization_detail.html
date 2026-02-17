@@ -92,7 +92,7 @@
                                 <div class="grid grid-cols-2 gap-2">
                                     {% if organization.twitter %}
                                         <div class="flex items-center space-x-3">
-                                            <i class="fab fa-x-twitter text-[#e74c3c]"></i>
+                                            <i class="fab fa-twitter text-[#e74c3c]"></i>
                                             <a href="{{ organization.twitter }}"
                                                target="_blank"
                                                class="text-gray-600 dark:text-gray-400 hover:text-[#e74c3c]">Twitter</a>
@@ -301,7 +301,7 @@
                                             No GitHub URL set for this organization. Add one to sync repositories.
                                         </p>
                                         <form method="post"
-                                              action="{% url 'update_organization_repos' organization.slug %}">
+                                              action="{% url 'update_organization_repos' organization.id %}">
                                             {% csrf_token %}
                                             <div class="flex flex-col space-y-2">
                                                 <label for="github_url"
@@ -312,7 +312,7 @@
                                                        id="github_url"
                                                        name="github_url"
                                                        placeholder="https://github.com/organization-name"
-                                                       class="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-[#e74c3c] focus:border-[#e74c3c]"
+                                                       class="px-3 py-2 border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 rounded-md shadow-sm focus:outline-none focus:ring-[#e74c3c] focus:border-[#e74c3c]"
                                                        required>
                                                 <p class="text-xs text-gray-500 dark:text-gray-500">Example: https://github.com/OWASP</p>
                                             </div>
